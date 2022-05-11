@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ctse
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-management-deployment
+  namespace: ctse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-management
+  template:
+    metadata:
+      labels:
+        app: product-management
+    spec:
+      containers:
+        - name: product-management
+          image: it19155944/product-management:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: product-management-config
+---
+
