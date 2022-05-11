@@ -74,7 +74,6 @@ jobs:
 
       # Deploy the new Docker image to the GKE cluster
       - name: Deploy
-        working-directory: /
         run: |-
-          envsubst < service.yaml | kubectl apply -f -
-          envsubst < deployment.yaml | kubectl apply -f -
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
