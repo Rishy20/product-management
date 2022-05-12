@@ -1,12 +1,15 @@
 import * as express from "express";
 import ProductController from "../controllers/ProductController";
+import HealthController from "../controllers/HealthController";
 import { multerMiddleWare } from "../middleware/multer";
 
 export default function setRoutes(app: any) {
   const router = express();
   const productControl = new ProductController();
+  const healthControl = new HealthController();
 
   app.use("/api", router);
+  app.use("/health", healthControl.displayHealth);
 
   //Product Routes
   router.route("/products").post(multerMiddleWare({ type: "multiple", path: "products" }), productControl.createProduct);
