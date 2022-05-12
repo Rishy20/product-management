@@ -13,4 +13,5 @@ export default {
   port: parseInt(process.env.PORT || "3005", 10),
   dbURL: process.env.MONGODB_URI,
   secret: process.env.SECRET,
+  version: process.env.VERSION,
 };
