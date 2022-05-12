@@ -75,6 +75,7 @@ jobs:
       # Deploy the new Docker image to the GKE cluster
       - name: Deploy
         run: |-
-          kubectl set image deployment/product-management-deployment -n=ctse product-management=it19155944/product-management:${{ github.sha }}
           kubectl apply -f deployment.yaml
           kubectl apply -f service.yaml
+          kubectl set image deployment/product-management-deployment -n=ctse product-management=it19155944/product-management:${{ github.sha }}
+          kubectl rollout status deployment/product-management-deployment -n ctse

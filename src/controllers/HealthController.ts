@@ -13,7 +13,7 @@ export default class HealthController {
     const today = new Date();
     const time = today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });
     const response = {
-      note: "Product Microservice up and running",
+      note: "Product Management Microservice up and running",
       time: time,
       version: config.version,
     };
