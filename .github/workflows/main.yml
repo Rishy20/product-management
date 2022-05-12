@@ -46,9 +46,9 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:buildcache,mode=max
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/product-management:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/product-management:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/product-management:buildcache,mode=max
 
   deploy:
     # The type of runner that the job will run on
