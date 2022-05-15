@@ -30,11 +30,12 @@ WORKDIR /app
 
 COPY --from=dependencies /app/package.json ./
 
-COPY --from=dependencies /app/public ./public
-
 RUN npm install
 
 COPY --from=build /app/dist ./dist
+
+COPY --from=build /app/public ./public
+
 
 RUN mkdir ./logs
 
