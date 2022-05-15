@@ -1,7 +1,7 @@
-import { IProduct } from "../interfaces/IProduct";
-import { Logger } from "../loaders/logger";
-import { IProductService } from "./interfaces/IProductService";
-import { ProductDao } from "../dao/ProductDao";
+import { IProduct } from "../interfaces/IProduct.js";
+import { Logger } from "../loaders/logger.js";
+import { IProductService } from "./interfaces/IProductService.js";
+import { ProductDao } from "../dao/ProductDao.js";
 
 export class ProductService implements IProductService {
   private logger = Logger.getInstance();

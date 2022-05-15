@@ -1,6 +1,6 @@
-import { Logger } from "../loaders/logger";
-import { IProduct } from "../interfaces/IProduct";
-import Product from "../models/Product";
+import { Logger } from "../loaders/logger.js";
+import { IProduct } from "../interfaces/IProduct.js";
+import Product from "../models/Product.js";
 
 export class ProductDao {
   private logger = Logger.getInstance();

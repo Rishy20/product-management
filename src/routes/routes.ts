@@ -1,7 +1,7 @@
-import * as express from "express";
-import ProductController from "../controllers/ProductController";
-import HealthController from "../controllers/HealthController";
-import { multerMiddleWare } from "../middleware/multer";
+import express from "express";
+import ProductController from "../controllers/ProductController.js";
+import HealthController from "../controllers/HealthController.js";
+import { multerMiddleWare } from "../middleware/multer.js";
 
 export default function setRoutes(app: any) {
   const router = express();

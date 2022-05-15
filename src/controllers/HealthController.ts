@@ -1,5 +1,5 @@
-import config from "../config/config";
-import { Logger } from "../loaders/logger";
+import config from "../config/config.js";
+import { Logger } from "../loaders/logger.js";
 
 export default class HealthController {
   public logger: Logger;

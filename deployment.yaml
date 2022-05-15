@@ -23,6 +23,13 @@ spec:
         - name: product-management
           image: it19155944/product-management:latest
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
           ports:
             - containerPort: 3000
           envFrom:

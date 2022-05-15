@@ -1,4 +1,4 @@
-import {IProduct} from "../../interfaces/IProduct";
+import {IProduct} from "../../interfaces/IProduct.js";
 
 export interface IProductService{
     createProduct(request:IProduct):Promise<IProduct>;
