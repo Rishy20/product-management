@@ -10,7 +10,7 @@ metadata:
   name: product-management-deployment
   namespace: ctse
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: product-management
